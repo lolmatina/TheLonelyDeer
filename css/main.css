@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.ground_left, .ground_right, .ground_center, .stars, .moon, .light, .lake, .mountains_left1,
+.mountains_left2, .mountains_left3, .mountains_left4, .mountains_left5, .mountains_left6,
+.mountains_right1, .mountains_right2, .mountains_right3, .mountains_right4 {
+    position: absolute;
+}
+
+/* .ground_left {
+    width: calc((1084 / 1920) * 100%);
+    height: calc((453 / 1539) * 100%);
+    background: url(../img/ground/left.svg);
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+} */
+
+.ground_center {
+    /* width: calc((1144 / 1920) * 100%); */
+    width: 100%;
+    height: 417px;
+    /* height: calc((280 / 1539) * 100%); */
+    background: url(../img/ground/ground.svg);
+    background-size: contain;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* backdrop-filter: blur(76.66px); */
+    z-index: 1;
+}
+
+/* .ground_right {
+    width: calc((1327 / 1920) * 100%);
+    height: calc((457 / 1539) * 100%);
+    background: url(../img/ground/right.svg);
+    background-size: cover;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+} */
+
+.lake {
+    width: 120%;
+    height: 335px;
+    /* height: calc((700 / 1539) * 100%); */
+    bottom: -100px;
+    right: 0;
+    left: -10%;
+    background: url(../img/lake/lake.svg);
+    background-size: 83.33%;
+    background-repeat: repeat no-repeat;
+    background-position: center center;
+    /* animation-name: lake; */
+    animation-duration: 100s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.stars {
+    width: 300vw;
+    height: 70vh;
+    background: url(../img/space/stars.svg);
+    background-repeat: repeat;
+    background-size: 33.33%;
+    animation-name: stars;
+    animation-duration: 300s;
+    left: -100vw;
+    top: 0;
+    /* animation-timeline: linear; */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transition: 10; */
+}
+
+@keyframes stars {
+    0%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+@keyframes lake {
+    0%{
+        transform: translateX(-10%);
+    }
+    50%{
+        transform: translateX(10%);
+    }
+    100%{
+        transform: translateX(-10%);
+    }
+}
